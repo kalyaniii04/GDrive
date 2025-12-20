@@ -1,0 +1,161 @@
+/* Background overlay */
+.modalBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Modal box */
+.modalContainer {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Title */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Body */
+.body {
+    margin-bottom: 1.5rem;
+}
+
+.address {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    max-width: 350px;
+    font-size: 1rem;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.address:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Dropdown List */
+#myForm {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+#myForm label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#myForm ul {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: #f8f8f8;
+}
+
+#myForm li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+#myForm li:last-child {
+    border-bottom: none;
+}
+
+/* Remove button */
+#myForm li button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+#myForm li button:hover {
+    background-color: #d9363e;
+    transform: scale(1.05);
+}
+
+/* Footer buttons */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.footer button {
+    flex: 1;
+    margin: 0 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+/* Cancel button */
+#cancelBtn {
+    background-color: #999;
+    color: white;
+}
+
+#cancelBtn:hover {
+    background-color: #777;
+}
+
+/* Share button */
+.footer button:last-child {
+    background-color: #2575fc;
+    color: white;
+}
+
+.footer button:last-child:hover {
+    background-color: #1a5ed8;
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

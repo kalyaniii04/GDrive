@@ -1,0 +1,112 @@
+/* display.css */
+
+/* Image grid */
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 900px;
+}
+
+/* Each image thumbnail */
+.image-list img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-list img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Input box */
+.address {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.7rem 1rem;
+    width: 90%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.address:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.4);
+}
+
+/* Center button */
+.center-button {
+    display: block;
+    margin: 1rem auto 2rem auto;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.center-button:hover {
+    background-color: #1a5ed8;
+    transform: scale(1.05);
+}
+
+/* 🔹 Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.close-button:hover {
+    background: #1a5ed8;
+}

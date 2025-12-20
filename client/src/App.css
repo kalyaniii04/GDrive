@@ -1,0 +1,84 @@
+/* App.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+}
+
+/* A wrapper to center & stack sections */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Main wallet/upload card */
+.app-container {
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    /* space before display section */
+}
+
+.app-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1a5ed8;
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+.share {
+    position: absolute;
+    /* stick it to top-left */
+    top: 20px;
+    left: 20px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.share:hover {
+    background-color: #1a5ed8;
+    transform: scale(1.05);
+}
