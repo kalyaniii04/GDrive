@@ -6,8 +6,9 @@
       "contentHash": "07831b16a57e47a24f4d6827e3685cea",
       "sourceName": "contracts/Upload.sol",
       "solcConfig": {
-        "version": "0.8.17",
+        "version": "0.8.20",
         "settings": {
+          "evmVersion": "paris",
           "optimizer": {
             "enabled": false,
             "runs": 200

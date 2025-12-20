@@ -1,18 +1,18 @@
-import hre from "hardhat";
+const { ethers } = require("hardhat");
 
 async function main() {
-  const [deployer] = await hre.ethers.getSigners();
+  const [deployer] = await ethers.getSigners();
   console.log("Deploying contracts with the account:", deployer.address);
 
-  const Upload = await hre.ethers.getContractFactory("Upload");
+  const Upload = await ethers.getContractFactory("Upload");
   const upload = await Upload.deploy();
 
-  await upload.waitForDeployment(); // ✅ ethers v6 style
+  await upload.deployed();
 
-  console.log("Upload contract deployed to:", await upload.getAddress());
+  console.log("Upload deployed at:", upload.address);
 }
 
 main().catch((error) => {
   console.error(error);
-  process.exitCode = 1;
+  process.exit(1);
 });
